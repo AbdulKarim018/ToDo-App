@@ -19,6 +19,7 @@ let list = document.getElementById("list");
 let i = localStorage.getItem('i') || 0;
 
 
+    // Retrieve existing todos from localStorage
 var todosArray = JSON.parse(localStorage.getItem("todos")) || [];
 
 function freshVisit() {
@@ -41,10 +42,6 @@ submit.addEventListener("click", (e) => {
   if (todo.title == '') {
     console.error("Invalid value for todo. DID NOT ADD!");
   } else {
-
-    // Retrieve existing todos from localStorage
-    var todosArray = JSON.parse(localStorage.getItem("todos")) || [];
-    console.log(todosArray)
 
     // Add the new todo object to the existing todos array
     todosArray.push(todo);
